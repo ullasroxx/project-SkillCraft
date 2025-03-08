@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body {
+            margin: 20pxpx;
+            font-family: "Times New Roman", serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background:  #623081; /* Teal */;
+            padding: 15px 20px;
+            transition: background 0.4s;
+        }
+        .navbar.scrolled {
+            background: #222;
+        }
+        .nav-links {
+            list-style:<tr>;
+            padding: 15px;
+            margin: 0;
+            display: font-style;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration:none;
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Starters</a></li>
+            <li><a href="#">Side Dishes</a></li>
+            <li><a href="#">Main Course</a></li>
+            <li><a href="#">Drinks</a></li>
+            <li><a href="#">Dessert</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        window.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+</html>
